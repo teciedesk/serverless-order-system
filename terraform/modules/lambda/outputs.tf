@@ -1,11 +1,7 @@
-output "place_order_lambda_arn" {
-  value = aws_lambda_function.place_order.arn
+output "lambda_function_name" {
+  value = aws_lambda_function.order_handler.function_name
 }
 
-output "authorizer_lambda_arn" {
-  value = aws_lambda_function.authorizer.arn
-}
-
-output "process_sqs_lambda_arn" {
-  value = aws_lambda_function.process_sqs.arn
+output "lambda_function_arn" {
+  value = aws_lambda_function.order_handler.arn
 }

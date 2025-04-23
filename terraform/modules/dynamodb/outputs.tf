@@ -1,15 +1,19 @@
 output "orders_table_name" {
-  value = aws_dynamodb_table.orders.name
+  description = "The name of the DynamoDB orders table"
+  value       = aws_dynamodb_table.orders.name
 }
 
 output "orders_table_arn" {
-  value = aws_dynamodb_table.orders.arn
+  description = "The ARN of the DynamoDB orders table"
+  value       = aws_dynamodb_table.orders.arn
 }
 
 output "orders_table_stream_arn" {
-  value = aws_dynamodb_table.orders.stream_arn
+  description = "The Stream ARN of the DynamoDB orders table"
+  value       = aws_dynamodb_table.orders.stream_arn
 }
 
-output "global_table_arn" {
-  value = aws_dynamodb_table.orders.arn
+output "table_name" {
+  description = "DynamoDB table name"
+  value       = aws_dynamodb_table.orders.name
 }

@@ -1,24 +1,40 @@
-variable "place_order_function_name" {
+variable "function_name" {
+  description = "Lambda function name"
   type        = string
-  description = "Name of the place order Lambda function"
 }
 
-variable "authorizer_function_name" {
+variable "lambda_exec_role_arn" {
+  description = "IAM Role ARN for Lambda"
   type        = string
-  description = "Name of the Lambda authorizer function"
 }
 
-variable "process_sqs_function_name" {
+variable "sqs_queue_url" {
+  description = "URL of the SQS queue"
   type        = string
-  description = "Name of the SQS processing Lambda function"
-}
-
-variable "lambda_role_arn" {
-  type        = string
-  description = "IAM Role ARN for Lambda functions"
 }
 
 variable "dynamodb_table_name" {
+  description = "The name of the DynamoDB orders table"
   type        = string
-  description = "DynamoDB table name for placing orders"
+}
+
+variable "dynamodb_table_arn" {
+  description = "The ARN of the DynamoDB orders table"
+  type        = string
+}
+
+variable "dynamodb_stream_arn" {
+  description = "The Stream ARN of the DynamoDB orders table"
+  type        = string
+}
+
+
+variable "lambda_zip_path" {
+  description = "Path to the zipped Lambda deployment package"
+  type        = string
+}
+
+variable "sqs_queue_arn" {
+  description = "ARN of the SQS queue"
+  type        = string
 }
